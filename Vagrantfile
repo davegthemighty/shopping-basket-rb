@@ -126,18 +126,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", name: "install required gems", inline: <<-'SHELL'
     export DEBIAN_FRONTEND=noninteractive
     # https://www.phusionpassenger.com/library/install/apache/install/oss/bionic/
-    cd /vagrant/service && bundler install
+    cd /vagrant/api && bundler install
   SHELL
 
   config.vm.provision "shell", name: "install webpacker", inline: <<-'SHELL'
     export DEBIAN_FRONTEND=noninteractive
     # https://www.phusionpassenger.com/library/install/apache/install/oss/bionic/
-    cd /vagrant/service && rails webpacker:install
+    cd /vagrant/api && rails webpacker:install
   SHELL
 
   config.vm.provision "shell", name: "create and populate sqlite database", inline: <<-'SHELL'
     export DEBIAN_FRONTEND=noninteractive
-    cd /vagrant/service && bin/rake db:drop db:create db:migrate db:seed
+    cd /vagrant/api && bin/rake db:drop db:create db:migrate db:seed
   SHELL
 
   config.vm.post_up_message = <<MESSAGE
@@ -148,7 +148,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     To access the server, you can use 'vagrant ssh'
 
-    On the server, the code is situated in /vagrant/service
+    On the server, the code is situated in /vagrant/api
 
 MESSAGE
 

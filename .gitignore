@@ -7,32 +7,32 @@
 .vagrant
 
 # Ignore bundler config.
-/service/.bundle
+/*/.bundle
 
 # Ignore the default SQLite database.
-/service/db/*.sqlite3
-/service/db/*.sqlite3-journal
-/service/db/*.sqlite3-*
+/*/db/*.sqlite3
+/*/db/*.sqlite3-journal
+/*/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/service/log/*
-/service/tmp/*
-!/service/log/.keep
-!/service/tmp/.keep
+/*/log/*
+/*/tmp/*
+!/*/log/.keep
+!/*/tmp/.keep
 
 # Ignore uploaded files in development.
-/service/storage/*
-!/service/storage/.keep
+/*/storage/*
+!/*/storage/.keep
 
-/service/public/assets
-/service/.byebug_history
+/*/public/assets
+/*/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/service/config/master.key
+/*/config/master.key
 
-/service/public/packs
-/service/public/packs-test
-/service/node_modules
-/service/yarn-error.log
-/service/yarn-debug.log*
-/service/.yarn-integrity
+/*/public/packs
+/*/public/packs-test
+/*/node_modules
+/*/yarn-error.log
+/*/yarn-debug.log*
+/*/.yarn-integrity
