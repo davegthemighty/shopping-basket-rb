@@ -1,5 +1,6 @@
 class Sample < ApplicationRecord
 
   validates :name, presence: true,
-                   length: { minimum: 3 }
+                   length: { minimum: 3 },
+                   uniqueness: { case_sensitive: false }
 end
