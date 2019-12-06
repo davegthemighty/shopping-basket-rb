@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-baskets = Basket.create([{ total: 12.99 }, {}])
+baskets = Basket.create([{ total: 12.99 }, { total: 0}])
 items = Item.create([{name: 'Beans', price: 5.99}, {name: 'Spam', price: 3.50}])
 
 BasketLine.create(basket: baskets.first, item: items.first, quantity: 1)

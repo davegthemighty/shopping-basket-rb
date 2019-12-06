@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   put 'baskets/:basket_id/items/:item_id', :to => 'basketlines#add_item'
   delete 'baskets/:basket_id/items/:item_id', :to => 'basketlines#remove_item'
 
+  delete 'baskets/:basket_id/items', :to => 'baskets#empty_basket'
+
 end

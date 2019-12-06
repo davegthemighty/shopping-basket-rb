@@ -102,6 +102,11 @@ _Delete one Item from the Basket_
 curl -X DELETE http://192.168.50.53/baskets/2/items/1
 ```
 
+_Empty Basket_
+```
+curl -X DELETE http://192.168.50.53/baskets/2/items
+```
+
 _Add a quantity of Items to a Basket (Not Implemented)_
 ```
 curl "http://192.168.50.53/baskets/2/items/1?quantity=3" \
