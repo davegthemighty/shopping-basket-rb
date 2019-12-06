@@ -7,4 +7,9 @@ class Basket < ApplicationRecord
   def get_updated_total
     self.basket_lines.sum { |line| line.item.price  * line.quantity }
   end
+
+  def empty_basket
+    self.basket_lines.destroy_all
+  end
+
 end
