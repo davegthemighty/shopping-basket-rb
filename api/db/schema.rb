@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_30_121209) do
+ActiveRecord::Schema.define(version: 2019_12_06_094333) do
 
   create_table "basket_lines", force: :cascade do |t|
     t.integer "quantity"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2018_12_30_121209) do
     t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "samples", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "basket_lines", "baskets"
