@@ -11,11 +11,25 @@ class SampleTest < ActiveSupport::TestCase
 
     assert_not sample.valid?
 
-    assert_equal sample.errors[:name], ["can't be blank"]
+    assert_equal sample.errors[:name], ["can't be blank", "is too short (minimum is 3 characters)"]
 
     sample.name = 'te'
+    assert_not sample.valid?
+
+  end
+
+  test "name must be at least three characters" do
+    sample = Sample.new
+    sample.name = 'te'
+
+    assert_not sample.valid?
+
+    assert_equal sample.errors[:name], ["is too short (minimum is 3 characters)"]
+
+    sample.name = 'tea'
     assert sample.valid?
 
   end
+
 
 end
