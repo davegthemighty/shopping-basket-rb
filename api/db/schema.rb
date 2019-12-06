@@ -36,11 +36,9 @@ ActiveRecord::Schema.define(version: 2019_12_06_094333) do
   end
 
   create_table "samples", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "test_model", force: :cascade do |t|
   end
 
   add_foreign_key "basket_lines", "baskets"
